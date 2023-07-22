@@ -1,4 +1,4 @@
 User-agent: User-agent: googlebot
 Disallow: 
 Disallow: /cgi-bin/
-Sitemap: https://webcrisp.me/sitemap.xml
+Sitemap: https://webcrisp.github.io/sitemap.xml

@@ -23,7 +23,7 @@ function sendEmail(userName, userEmail, subject, description) {
     Host: "smtp.gmail.com",
 
     Username: "webcrispco@gmail.com",
-    Password: "uebcgimgqkfmbdqu",
+    Password: process.env.EMAIL_PASSWORD,
 
     To: "webcrispco@gmail.com",
     From: `${userEmail}`,
