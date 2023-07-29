@@ -9,11 +9,10 @@ done.addEventListener("click", () => {
   let description = document.getElementById("contactMessage");
 
   userName = userName.value;
-  userName = userEmail.value;
-  description = description.value;
   userEmail = userEmail.value;
+  subject = subject.value;
+  description = description.value;
   
-  console.log(userName, userEmail, description);
   sendEmail(userName, userEmail, subject, description);
 });
 
@@ -23,11 +22,11 @@ function sendEmail(userName, userEmail, subject, description) {
     Host: "smtp.gmail.com",
 
     Username: "webcrispco@gmail.com",
-    Password: process.env.EMAIL_PASSWORD,
+    Password: "crvwpdshbysiynod",
 
     To: "webcrispco@gmail.com",
     From: `${userEmail}`,
-    Subject: `${subject}`,
+    Subject: `${subject}|${userName}`,
     Body:`${description}`,
 
     //   Attachments: [
@@ -36,7 +35,6 @@ function sendEmail(userName, userEmail, subject, description) {
     //       path: "Full Path of the file"
     //     }]
   }).then(function(message){
-
     console.log("Done");
     var sLoader = $('.submit-loader');
     sLoader.slideUp("slow"); 

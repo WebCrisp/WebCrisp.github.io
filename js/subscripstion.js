@@ -1,4 +1,4 @@
-var api_key = process.env.SENDGRID_API_KEY;
+var api_key = "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";
 
 let add_user = async () => {
   var email = document.getElementById('mc-email');
